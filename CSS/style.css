@@ -26,7 +26,7 @@ body {
 header {
   /* free banner image from pixelbay
   https://pixabay.com/illustrations/banner-header-homepage-halloween-1756639/ */
-  background: url('/SamuelsSchoolWork/CapstoneProject/CSS/Banner/rustic-banner.jpg') no-repeat center center;
+  background: url('../CSS/Banner/rustic-banner.jpg') no-repeat center center;
   background-size: cover;
   color: white;
   padding: 1em;
@@ -46,7 +46,7 @@ main {
 
 footer {
   text-align: center;
-  background:	#5b5b39;
+  background:	#727272;
   padding: 4px;
   color: #b7c3ca
 }
@@ -56,7 +56,6 @@ footer {
 /* RESUME PAGE */
 .download-btn {
   display: inline-block;
-  margin: 1em 0;
   padding: 0.7em 1.2em;
   background-color: #FF0000;  /*  made it a pdf red */
   color: #fff;
