@@ -26,7 +26,7 @@ body {
 header {
   /* free banner image from pixelbay
   https://pixabay.com/illustrations/banner-header-homepage-halloween-1756639/ */
-  background: url('../CSS/Banner/rustic-banner.jpg') no-repeat center center;
+  background: url('https://samuela67.github.io/samuel-ashley-portfolio/CSS/Banner/rustic-banner.jpg') no-repeat center center;
   background-size: cover;
   color: white;
   padding: 1em;
@@ -57,18 +57,20 @@ footer {
 .download-btn {
   display: inline-block;
   padding: 0.7em 1.2em;
-  background-color: #FF0000;  /*  made it a pdf red */
+  background-color: #FF0000;  /* pdf red */
   color: #fff;
   border-radius: 6px;
   text-decoration: none;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  margin-bottom: 1em;
 }
 
 .download-btn:hover {
   background-color: #b30000;
 }
 
+/* housing the iframe here */
 .pdf-container {
   max-width: 800px;
   height: 90vh;
@@ -94,7 +96,6 @@ footer {
 .project-info h3 {
   margin-top: 0;
   font-size: 1.75em;
-  color: #2c3e50;
 }
 
 .project-info p {

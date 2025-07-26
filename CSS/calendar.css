@@ -31,6 +31,7 @@ h1 {
 
 #calendar {
   display: grid;
+  /* make sure this and the weekdays text columns match */
   grid-template-columns: repeat(7, 1fr);
   max-width: 600px;
   margin: auto;

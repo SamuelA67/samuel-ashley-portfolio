@@ -4,12 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Habit Calendar</title>
-  <link rel="stylesheet" href="../CSS/calendar.css" />
+  <link rel="stylesheet" href="https://samuela67.github.io/samuel-ashley-portfolio/CSS/calendar.css" />
 </head>
 <body>
   <main>
     <h1>Habit Tracker Calendar</h1>
 
+    <!-- habit dd, habit input, habit add, habit, delete -->
     <section id="habit-controls">
       <select id="habitSelect"></select>
       <input type="text" id="newHabit" placeholder="New Habit Name" />
@@ -17,18 +18,20 @@
       <button onclick="deleteHabit()">Delete Habit</button>
     </section>
 
+    <!--- pagination to change month --->
     <div id="calendar-controls">
-      <button onclick="changeMonth(-1)">←</button>
+      <button onclick="changeMonth(-1)">&#8592</button>
       <span id="monthYear"></span>
-      <button onclick="changeMonth(1)">→</button>
+      <button onclick="changeMonth(1)">&#8594</button>
     </div>
 
+    <!-- weekday headers to top the calendar -->
     <div id="weekdays">
       <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
     </div>
 
     <div id="calendar"></div>
   </main>
-  <script src="../JS/calendar.js"></script>
+  <script src="JS/calendar.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@ let currentHabit = "";
 
 //helper functions to save to local storage
 //saves object of completed dates per habit
-//{ "Exercise": ["2025-07-22", "2025-07-23"], "Read": [] }
+//{ "Biking": ["2025-07-22", "2025-07-23"], "Lifting": [] }
 function saveCompletedDates(data) 
 {
   localStorage.setItem("habitCalendar", JSON.stringify(data));
@@ -17,7 +17,7 @@ function getCompletedDates()
 }
 
 //save the list of habit names
-//["Exercise", "Read"]
+//["Biking", "Lifting"]
 function saveHabitList(list) 
 {
   localStorage.setItem("habitList", JSON.stringify(list));
@@ -32,7 +32,7 @@ function getHabitList()
 
 //HABIT FUNCTIONS
 
-// Add a new habit entered by the user
+//add new habit
 function addHabit()
 {
   const newHabitInput = document.getElementById("newHabit");
@@ -59,6 +59,8 @@ function addHabit()
     const allDates = getCompletedDates();
     //add the new key to the structure
     allDates[name] = [];
+    //console.log('allDates',allDates);
+
     //save back into local storage
     saveCompletedDates(allDates);
   }
@@ -83,7 +85,7 @@ function deleteHabit()
     return;
   } 
 
-  //remove habit from list
+  //get list of all habits
   let habits = getHabitList();
 
   //new list to exclude deleted habit
@@ -100,6 +102,7 @@ function deleteHabit()
       updatedHabits.push(current);
     }
   }
+  //console.log('updatedHabits',updatedHabits);
 
   //save the new list
   saveHabitList(updatedHabits);
@@ -144,7 +147,7 @@ function loadHabitSelector(selected = "")
     currentHabit = habits[0];
     select.value = currentHabit;
   } 
-  //if selected is passed in set to that
+  //if selected is passed in set to that (add)
   else if(selected)
   {
     currentHabit = selected;
@@ -229,7 +232,7 @@ function renderCalendar()
 
     //set onclick for all the divs that toggles completion
     div.onclick = () => {
-      console.log('dateStr', dateStr)
+      //console.log('dateStr', dateStr)
       //load all completed dates
       const allDates = getCompletedDates();
 
@@ -274,6 +277,7 @@ function renderCalendar()
       renderCalendar();
     };
 
+    //use grid styling to handle the calendar structure
     calendar.appendChild(div);
   }
 }
