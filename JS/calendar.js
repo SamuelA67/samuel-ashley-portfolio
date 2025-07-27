@@ -136,11 +136,11 @@ function loadHabitSelector(selected = "")
     noHabitMessage.style.display = "block";
     noHabitMessage.textContent = "Please add a habit to get started.";
 
-    //hide the calendat
+    //hide the calendar
     document.getElementById("calendar").style.display = "none";
     document.getElementById("monthYear").textContent = "";
 
-    //disable navbuttons
+    //disable nav buttons
     prevBtn.disabled = true;
     nextBtn.disabled = true;
 
