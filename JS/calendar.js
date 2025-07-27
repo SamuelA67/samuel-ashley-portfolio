@@ -123,7 +123,39 @@ function loadHabitSelector(selected = "")
   const select = document.getElementById("habitSelect");
   const habits = getHabitList();
 
+  const prevBtn = document.querySelector("#calendar-controls button:first-child");
+  const nextBtn = document.querySelector("#calendar-controls button:last-child");
+  const noHabitMessage = document.getElementById("noHabitMessage");
+
   select.innerHTML = "";
+
+  //check if there are no habits on load
+  if (habits.length === 0)
+  {
+    //show the message
+    noHabitMessage.style.display = "block";
+    noHabitMessage.textContent = "Please add a habit to get started.";
+
+    //hide the calendat
+    document.getElementById("calendar").style.display = "none";
+    document.getElementById("monthYear").textContent = "";
+
+    //disable navbuttons
+    prevBtn.disabled = true;
+    nextBtn.disabled = true;
+
+    currentHabit = "";
+    return;
+  }
+  else
+  {
+    //if habit exists hide message and display calendar
+    noHabitMessage.style.display = "none";
+    document.getElementById("calendar").style.display = "grid"; // or "block", depending on your CSS
+    //enable nav buttons
+    prevBtn.disabled = false;
+    nextBtn.disabled = false;
+  }
 
   //loop through each habit and create an option
   habits.forEach(habit => {
